@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title> Test </title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<style>
+		.divCo {
+			width: 250px;
+			margin: 5px;
+			align-content: center;
+			float: left;
+		}
+
+		.btnCo {
+			width: 100%;
+			height: 32px;
+			line-height: 16px;
+			font-weight: bold;
+			background-color: #ffffff;
+			color: #41535b;
+			border: 1px solid;
+			border-bottom: 0;
+			border-color: #7c7c7c;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			outline: none;
+		}
+
+		.btnCo:focus {
+			outline: none;
+			box-shadow: none;
+		}
+
+		.btnCo:hover {
+			background-color: #2c8ef8;
+			color: white;
+		}
+
+		.posName {
+			width: 100%;
+			background-color: #e5e5e5;
+			border: 1px solid;
+			border-top: 0;
+			border-color: #7c7c7c;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			text-align: center;
+			font-size: 14px;
+			font-weight: bold;
+		}
+
+		.posName:focus {
+			outline: none;
+		}
+
+		.secName {
+			width: 100%;
+			height: 500px;
+			margin-top: 12px;
+			text-align: center;
+
+		}
+
+		.section1 {
+			width: 80px;
+			height: 100%;
+			float: left;
+			display: inline-block;
+		}
+
+		.section2 {
+			margin-left: 4px;
+			margin-right: 4px;
+		}
+
+		.dept {
+			background-color: #263a44;
+			color: #ffffff !important;
+			font-size: 11pt;
+			font-weight: 900;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			border-radius: 5px;
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.btnName {
+			width: 100%;
+			font-size: 14px;
+			background-color: #ffffff;
+			margin: 0;
+			border: 0;
+			padding: 0;
+			outline: 0;
+		}
+
+		.btnName:focus {
+			outline: 0;
+		}
+
+		.btnname:hover {
+			background-color: #e5e5e5;
+		}
+
+		#absolute {
+			margin-top: 2%;
+			text-align: center;
+		}
+
+		.chairman,
+		.president,
+		.vice-president {
+			width: 3.5%;
+			margin-bottom: 0.3%;
+			padding-right: 0.6%;
+			padding-left: 0.6%;
+			border-radius: 100%;
+			background-color: #fff;
+
+		}
+
+	</style>
+
+</head>
+
+<body id="body" style="width: 3200px; height: 100%">
+	<div style="width: 50%; margin: 0 auto; align-content: center;">
+		<img src="images/chairman.png" width="60" style="margin-top: 5px;">
+		<br>
+		<img src="images/president.png" width="60" style="margin-top: 5px;">
+		<br>
+		<img src="images/vice-president.png" width="60" style="margin-top: 5px;">
+	</div>
+
+	<div id="organization" style="width: 100%; margin: 15px; align-content: center;">
+		<div id="blank" style="width: 20px; float: left;">
+			<a> 　 </a>
+		</div>
+
+		<div id="성남" class="divCo">
+			<button type="button" id="btn0" class="btnCo" onclick="toggle('성남', 'btn0', 'section0');">성남 -</button>
+			<input class="posName" value="GM 배효만 상무" readonly>
+			<div class="secName" id="section0">
+				<div class="section1">
+					<a class="dept">영 업</a>
+					<p style="font-size: 14px; margin-bottom: 0; background-color: #d0cbc7; font-weight: bold;">영업 1팀</p>
+					<button class="btnName" data-toggle="modal" data-target="#exampleModalCenter">이원찬 인턴</button>
+				</div>
+				<div class="section1 section2">
+					<a class="dept">생 산</a>
+					<p style="font-size: 14px; margin-bottom: 0; background-color: #d0cbc7; font-weight: bold;">생산 1팀</p>
+					<button class="btnName">이원찬 인턴</button>
+				</div>
+				<div class="section1">
+					<a class="dept">관 리</a>
+					<p style="font-size: 14px; margin-bottom: 0; background-color: #d0cbc7; font-weight: bold;">관리 1팀</p>
+					<button class="btnName">이원찬 인턴</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="PK1" class="divCo">
+			<button type="button" id="btn1" class="btnCo" onclick="toggle('PK1', 'btn1', 'section1')">PK1 -</button>
+			<input class="posName" value="GM 배효만 상무" readonly>
+			<div class="secName" id="section1">
+				<div class="section1">
+					<a class="dept">영 업</a>
+				</div>
+				<div class="section1 section2">
+					<a class="dept">생 산</a>
+				</div>
+				<div class="section1">
+					<a class="dept">관 리</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="PK2" class="divCo">
+			<button type="button" id="btn2" class="btnCo" onclick="toggle('PK2', 'btn2', 'section2')">PK2 -</button>
+			<input class="posName" value="GM 배효만 상무" readonly>
+			<div class="secName" id="section2">
+				<div class="section1">
+					<a class="dept">영 업</a>
+				</div>
+				<div class="section1 section2">
+					<a class="dept">생 산</a>
+				</div>
+				<div class="section1">
+					<a class="dept">관 리</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="PK3" class="divCo">
+			<button type="button" id="btn3" class="btnCo" onclick="toggle('PK3', 'btn3', 'section3')">PK3 -</button>
+			<input class="posName" value="GM 배효만 상무" readonly>
+			<div class="secName" id="section3">
+				<div class="section1">
+					<a class="dept">영 업</a>
+				</div>
+				<div class="section1 section2">
+					<a class="dept">생 산</a>
+				</div>
+				<div class="section1">
+					<a class="dept">관 리</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="JSC" class="divCo">
+			<button type="button" id="btn4" class="btnCo" onclick="toggle('JSC', 'btn4', 'section4')">JSC -</button>
+			<input class="posName" value="GM 배효만 상무" readonly>
+			<div class="secName" id="section4">
+				<div class="section1">
+					<a class="dept">영 업</a>
+				</div>
+				<div class="section1 section2">
+					<a class="dept">생 산</a>
+				</div>
+				<div class="section1">
+					<a class="dept">관 리</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="PKBT" class="divCo">
+			<button type="button" id="btn5" class="btnCo" onclick="toggle('PKBT', 'btn5', 'section5')">PKBT -</button>
+			<input class="posName" value="GM 배효만 상무" readonly>
+			<div class="secName" id="section5">
+				<div class="section1">
+					<a class="dept">영 업</a>
+				</div>
+				<div class="section1 section2">
+					<a class="dept">생 산</a>
+				</div>
+				<div class="section1">
+					<a class="dept">관 리</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="PKSU" class="divCo">
+			<button type="button" id="btn6" class="btnCo" onclick="toggle('PKSU', 'btn6', 'section6')">PKSU -</button>
+			<input class="posName" value="GM 배효만 상무" readonly>
+			<div class="secName" id="section6">
+				<div class="section1">
+					<a class="dept">영 업</a>
+				</div>
+				<div class="section1 section2">
+					<a class="dept">생 산</a>
+				</div>
+				<div class="section1">
+					<a class="dept">관 리</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="PKGR" class="divCo">
+			<button type="button" id="btn7" class="btnCo" onclick="toggle('PKGR', 'btn7', 'section7')">PKGR -</button>
+			<input class="posName" value="GM 배효만 상무" readonly>
+			<div class="secName" id="section7">
+				<div class="section1">
+					<a class="dept">영 업</a>
+				</div>
+				<div class="section1 section2">
+					<a class="dept">생 산</a>
+				</div>
+				<div class="section1">
+					<a class="dept">관 리</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="PKMM" class="divCo">
+			<button type="button" id="btn8" class="btnCo" onclick="toggle('PKMM', 'btn8', 'section8')">PKMM -</button>
+			<input class="posName" value="GM 배효만 상무" readonly>
+			<div class="secName" id="section8">
+				<div class="section1">
+					<a class="dept">영 업</a>
+				</div>
+				<div class="section1 section2">
+					<a class="dept">생 산</a>
+				</div>
+				<div class="section1">
+					<a class="dept">관 리</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="PKEP" class="divCo">
+			<button type="button" id="btn9" class="btnCo" onclick="toggle('PKEP', 'btn9', 'section9')">PKEP -</button>
+			<input class="posName" value="GM 배효만 상무" readonly>
+			<div class="secName" id="section9">
+				<div class="section1">
+					<a class="dept">영 업</a>
+				</div>
+				<div class="section1 section2">
+					<a class="dept">생 산</a>
+				</div>
+				<div class="section1">
+					<a class="dept">관 리</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="btn-group" role="group" aria-label="Basic example" style="margin-top: 5px;">
+			<button type="button" id="ZoomIn" class="btn btn-secondary" onclick="ZoomIn()">확대</button>
+			<button type="button" id="ZoomOut" class="btn btn-secondary" onclick="ZoomOut()">축소</button>
+		</div>
+	</div>
+
+	<script>
+		var body = document.getElementById("organization");
+		var count = 1;
+		var px = 1;
+
+		function ZoomIn() {
+			count++;
+			if (count >= 4) {
+				count = 3;
+			}
+			console.log(count);
+			Zoom();
+		}
+
+		function ZoomOut() {
+			count--;
+			if (count <= 0) {
+				count = 1;
+			}
+			console.log(count);
+			Zoom();
+		}
+
+		function Zoom() {
+			if (count == 1) {
+				body.style.transform = "scale(" + px + ")";
+			} else if (count == 2) {
+				body.style.transform = "scale(1.1, 1.1)";
+			} else if (count == 3) {
+				body.style.transform = "scale(1.2, 1.2)";
+			}
+		}
+
+//				var getBody = document.getElementById("성남");
+//				var getStyle = getBody.currentStyle || window.getComputedStyle(getBody);
+//				var getMargin = getStyle.marginLeft;
+//		
+//				$("body").on("mousewheel", function(event) {
+//					if (event.originalEvent.wheelDelta > 0) {
+//						px += 0.1;
+//		
+//						getBody.style.marginLeft += '400px';
+//						//body.style.marginLeft = '350px';
+//						Zoom();
+//					} else if (event.originalEvent.wheelDelta < 0) {
+//						px -= 0.1;
+//						Zoom();
+//					}
+//				});
+
+	</script>
+
+	<!--Function for change size of toggle button with corporation name -->
+	<script>
+		function toggle(divCo, btnCo, secName) {
+			var div = document.getElementById(divCo);
+			var button = document.getElementById(btnCo);
+			var section = document.getElementById(secName);
+
+			if (button.textContent == divCo + " -") {
+				button.textContent = divCo + " +";
+				div.style.width = '120px';
+				section.style.visibility = 'hidden';
+
+			} else {
+				button.textContent = divCo + " -";
+				div.style.width = '250px';
+				section.style.visibility = 'visible';
+			}
+		}
+
+	</script>
+
+
+</body>
+
+</html>
