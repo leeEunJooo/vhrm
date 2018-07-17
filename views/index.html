@@ -9,6 +9,7 @@
 
 	<title> Test </title>
 
+	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<!-- Bootstrap core CSS -->
@@ -115,38 +116,19 @@
 			background-color: #e5e5e5;
 		}
 
-		#absolute {
-			margin-top: 2%;
-			text-align: center;
-		}
-
-		.chairman,
-		.president,
-		.vice-president {
-			width: 3.5%;
-			margin-bottom: 0.3%;
-			padding-right: 0.6%;
-			padding-left: 0.6%;
-			border-radius: 100%;
-			background-color: #fff;
-
-		}
-
 	</style>
 
 </head>
 
 <body id="body" style="height: 100%">
-	<div style="width: 100%;  background-color: #3f3f3f; padding-bottom: 5px; padding-left: 10px; margin-bottom: 10px;">
+	<div style="width: 100%;  background-color: #3f3f3f; padding-bottom: 5px; padding-left: 10px;">
 		<img src="/images/logo.png" width="200" height="25">
 	</div>
 
 	<div style="width: 100%; text-align: center; margin-bottom: 20px;">
-		<img src="/images/chairman.png" width="60" style="margin-top: 5px;">
-		<br>
-		<img src="/images/president.png" width="60" style="margin-top: 5px;">
-		<br>
-		<img src="/images/vice-president.png" width="60" style="margin-top: 5px;">
+		<img src="/images/chairman.png" width="60" style="margin-top: 15px;"><br>
+		<img src="/images/president.png" width="60" style="margin-top: 5px;"><br>
+		<img src="/images/vice-president.png" width="60" style="margin-top: 5px;"><br>
 	</div>
 
 	<div id="organization" style="width: 3000px; height: 600px; margin: 15px; align-content: center;">
@@ -355,22 +337,22 @@
 			}
 		}
 
-//				var getBody = document.getElementById("성남");
-//				var getStyle = getBody.currentStyle || window.getComputedStyle(getBody);
-//				var getMargin = getStyle.marginLeft;
-//		
-//				$("body").on("mousewheel", function(event) {
-//					if (event.originalEvent.wheelDelta > 0) {
-//						px += 0.1;
-//		
-//						getBody.style.marginLeft += '400px';
-//						//body.style.marginLeft = '350px';
-//						Zoom();
-//					} else if (event.originalEvent.wheelDelta < 0) {
-//						px -= 0.1;
-//						Zoom();
-//					}
-//				});
+		//				var getBody = document.getElementById("성남");
+		//				var getStyle = getBody.currentStyle || window.getComputedStyle(getBody);
+		//				var getMargin = getStyle.marginLeft;
+		//		
+		//				$("body").on("mousewheel", function(event) {
+		//					if (event.originalEvent.wheelDelta > 0) {
+		//						px += 0.1;
+		//		
+		//						getBody.style.marginLeft += '400px';
+		//						//body.style.marginLeft = '350px';
+		//						Zoom();
+		//					} else if (event.originalEvent.wheelDelta < 0) {
+		//						px -= 0.1;
+		//						Zoom();
+		//					}
+		//				});
 
 	</script>
 
@@ -395,6 +377,15 @@
 
 	</script>
 
+	// Function for calling modal
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				$(".dep").toggle();
+			});
+		});
+
+	</script>
 
 </body>
 
